@@ -5,25 +5,24 @@ Script to run Homebridge as a daemon on OS X
 
 
 in a terminal :
-> $ sudo ./install.bash
+`$ sudo ./install.bash`
 
 if this command fails:
-> $ sudo sh install.bash
+`$ sudo sh install.bash`
 
 
 ##Restarting Homebridge (if you modify the config.json file for example)
 
 in a terminal :
-> $ sudo ./restart.bash
+`$ sudo ./restart.bash`
 
 if this command fails:
-> $ sudo sh restart.bash
+`$ sudo sh restart.bash`
 
 ##Uninstalling Homebridge as a daemon in OS X
-  
+
 in a terminal :
-> $ sudo ./uninstall.bash
+`$ sudo ./uninstall.bash`
 
 if this command fails:
-> $ sudo sh uninstall.bash
-
+`$ sudo sh uninstall.bash`
