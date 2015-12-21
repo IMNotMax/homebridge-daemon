@@ -1,6 +1,9 @@
 # homebridge-daemon
 Script to run Homebridge as a daemon on OS X
 
+##ToDo
+Check if the NPM Forever Agent is previously installed to skip the install in `install.bash`
+
 ##Installation
 Download the files on your Mac.
 
