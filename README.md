@@ -31,3 +31,6 @@ in Terminal:
 
 if this command fails:
 `$ sudo sh uninstall.bash`
+
+##Credits
+All the scritps I've created are directly inspired by the [PlexConnect](https://github.com/iBaa/PlexConnect) OS X scripts
