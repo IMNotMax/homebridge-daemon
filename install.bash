@@ -1,18 +1,23 @@
 #!/bin/bash
 ## created using the PlexConnect bash files for installing the daemon
-InstallerPath=${PWD}
-CurrentUser=${USERS}
+InstallerPath=$(PWD)
+CurrentUser=$(USERS)
+echo Install NPM Forever
+npm install -g Forever
+
 
 echo -------------------------------
 ## create autostart plist for next boot
 echo 'Installing Homebridge-Daemon...'
 echo Install from: $InstallerPath
+echo Install for: $CurrentUser or ${CurrentUser}
 echo -------------------------------
-echo   
+echo
 
+## Modify the VAR names in the PList file and save it in the Library directory
+sed -e "s/__CURRENTUSER__/${CurrentUser}/" "${InstallerPath}/org.homebridge.daemon.plist" > /Library/LaunchDaemons/org.homebridge.daemon.plist
 ## Copy directly to the /Library/LaunchDameons folder
-
-cp ${InstallerPath}/org.homebridge.daemon.plist /Library/LaunchDaemons/org.homebridge.daemon.plist
+##cp ${InstallerPath}/org.homebridge.daemon.plist /Library/LaunchDaemons/org.homebridge.daemon.plist
 
 ## change ownership and permissions of the plist file to make it launchctl compatible
 chown root /Library/LaunchDaemons/org.homebridge.daemon.plist
@@ -25,13 +30,13 @@ echo 'Starting Homebridge-Daemon...'
 launchctl load /Library/LaunchDaemons/org.homebridge.daemon.plist
 
 ## wait a couple seconds to allow Homebridge to load
-sleep 5
+## sleep 5
 
 ## display the running status of Homebridge
 echo   - below the running status of Homebridge-daemon.
 echo   - if nothing appears, the daemon is not launched
-echo  
+echo
 launchctl list | grep org.homebridge.daemon
-echo  
-echo  
+echo
+echo
 ## end

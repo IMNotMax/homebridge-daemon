@@ -5,14 +5,14 @@
 	<key>Label</key>
 	<string>org.homebridge.daemon.plist</string>
 	<key>Program</key>
-	  <string>/usr/bin/homebridge</string>
+	  <string>forever start homebridge</string>
 	<key>UserName</key>
 	  <string>root</string>
 	<key>RunAtLoad</key>
 	  <true/>
 	<key>StandardErrorPath</key>
-      <string>/Users/%USER%/Library/Logs/homebridge.log</string>
+      <string>/Users/__CURRENTUSER__/Library/Logs/homebridge.log</string>
     <key>StandardOutPath</key>
-      <string>/Users/%USER%/Library/Logs/homebridge.log</string>
+      <string>/Users/__CURRENTUSER__/Library/Logs/homebridge.log</string>
 </dict>
 </plist>
