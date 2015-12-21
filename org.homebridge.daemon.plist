@@ -3,9 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>org.homebridge.daemon.plist</string>
-	<key>Program</key>
-	  <string>forever start homebridge</string>
+	<string>org.homebridge.daemon</string>
+		<key>ProgramArguments</key>
+			<array>
+				<string>usr/local/bin/forever</string>
+				<string>start</string>
+				<string>/usr/local/bin/homebridge</string>
+			</array>
 	<key>UserName</key>
 	  <string>root</string>
 	<key>RunAtLoad</key>

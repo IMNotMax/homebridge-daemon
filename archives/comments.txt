@@ -1,0 +1,2 @@
+But thanx to you, I've created scripts to install and launch Homebridge in OS X: [https://github.com/IMNotMax/homebridge-daemon](https://github.com/IMNotMax/homebridge-daemon)
+I ran my tests on 2 different mac (OS X 10.7.5 and 10.10.5). They look good and no need to applescript.

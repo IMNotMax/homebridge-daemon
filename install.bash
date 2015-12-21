@@ -2,8 +2,20 @@
 ## created using the PlexConnect bash files for installing the daemon
 InstallerPath=$(PWD)
 CurrentUser=$(USERS)
-echo Install NPM Forever
-npm install -g Forever
+findme="forever-agent"
+
+## check if NPM Forever agent is installed
+file=$(npm list | grep $findme)
+
+if [ -z "$file" ]
+then
+	echo "$findme not found."
+  echo Install NPM Forever
+  npm install -g forever
+else
+	echo "$findme found: $file"
+fi
+
 
 
 echo -------------------------------
@@ -14,8 +26,12 @@ echo Install for: $CurrentUser or ${CurrentUser}
 echo -------------------------------
 echo
 
+## copy the bash file used in the PList file to launch Homebridge through Forever
+cp ${InstallerPath}/forever-homebridge.bash /usr/local/bin/forever-homebridge.bash
+
 ## Modify the VAR names in the PList file and save it in the Library directory
 sed -e "s/__CURRENTUSER__/${CurrentUser}/" "${InstallerPath}/org.homebridge.daemon.plist" > /Library/LaunchDaemons/org.homebridge.daemon.plist
+
 ## Copy directly to the /Library/LaunchDameons folder
 ##cp ${InstallerPath}/org.homebridge.daemon.plist /Library/LaunchDaemons/org.homebridge.daemon.plist
 

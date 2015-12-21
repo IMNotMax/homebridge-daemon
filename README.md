@@ -9,7 +9,7 @@ Download the files on your Mac.
 
 in Terminal:
 Go to the directory you extract the zip
-`$ chmod 777 *.bash`
+`$ chmod 777 install.bash`
 This command allow all .bash file to be executed directly (with ./NameOfTheBashFile.bash)
 
 Then:
@@ -22,6 +22,8 @@ if this command fails:
 ##Restarting Homebridge (if you modify the config.json file for example)
 
 in Terminal:
+Go to the directory you extract the zip
+`$ chmod 777 restart.bash`
 `$ sudo ./restart.bash`
 
 if this command fails:
@@ -30,6 +32,8 @@ if this command fails:
 ##Uninstalling Homebridge as a daemon in OS X
 
 in Terminal:
+Go to the directory you extract the zip
+`$ chmod 777 uninstall.bash`
 `$ sudo ./uninstall.bash`
 
 if this command fails:
