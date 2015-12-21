@@ -2,9 +2,14 @@
 Script to run Homebridge as a daemon on OS X
 
 ##Installation
+Download the files on your Mac.
 
+in Terminal:
+Go to the directory you extract the zip
+`$ chmod 777 *.bash`
+This command allow all .bash file to be executed directly (with ./NameOfTheBashFile.bash)
 
-in a terminal :
+Then:
 `$ sudo ./install.bash`
 
 if this command fails:
@@ -13,7 +18,7 @@ if this command fails:
 
 ##Restarting Homebridge (if you modify the config.json file for example)
 
-in a terminal :
+in Terminal:
 `$ sudo ./restart.bash`
 
 if this command fails:
@@ -21,7 +26,7 @@ if this command fails:
 
 ##Uninstalling Homebridge as a daemon in OS X
 
-in a terminal :
+in Terminal:
 `$ sudo ./uninstall.bash`
 
 if this command fails:
