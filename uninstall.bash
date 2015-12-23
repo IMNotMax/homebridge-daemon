@@ -4,11 +4,16 @@
 echo 'Uninstalling Homebridge Daemon...'
 
 ## unload plist
-launchctl unload /Library/LaunchDaemons/org.homebridge.daemon.plist
-forever stop /usr/local/bin/homebridge
-
+launchctl unload ~/Library/LaunchAgents/org.homebridge.daemon.plist
+##forever stop /usr/local/bin/homebridge
+echo done.
+echo
+echo removing files
 ## remove autostart plist from the /Library/LaunchDameons folder
-rm /Library/LaunchDaemons/org.homebridge.daemon.plist
-
+rm ~/Library/LaunchAgents/org.homebridge.daemon.plist
+echo done.
+## remove the bash file used to launch the daemon
+##rm /usr/local/bin/homebridge-daemon.bash
+echo if a line appears below, please uninstall again
 ## display the running status of Homnebridge Daemon
 launchctl list | grep org.homebridge.daemon

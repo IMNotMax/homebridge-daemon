@@ -4,19 +4,17 @@
 <dict>
 	<key>Label</key>
 	<string>org.homebridge.daemon</string>
-		<key>ProgramArguments</key>
-			<array>
-				<string>usr/local/bin/forever</string>
-				<string>start</string>
-				<string>/usr/local/bin/homebridge</string>
-			</array>
+	<key>ProgramArguments</key>
+	    <array>
+				<string>/usr/local/bin/forever start /usr/local/bin/homebridge</string>
+	    </array>
+	<key>OnDemand</key>
+		<true/>
 	<key>UserName</key>
-	  <string>root</string>
+			<string>root</string>
 	<key>RunAtLoad</key>
-	  <true/>
-	<key>StandardErrorPath</key>
-      <string>/Users/__CURRENTUSER__/Library/Logs/homebridge.log</string>
-    <key>StandardOutPath</key>
-      <string>/Users/__CURRENTUSER__/Library/Logs/homebridge.log</string>
+	    <true/>
+	<key>KeepAlive</key>
+  <true/>
 </dict>
 </plist>
