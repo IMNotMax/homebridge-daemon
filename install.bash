@@ -37,8 +37,9 @@ sed -e "s/__CURRENTUSER__/${CurrentUser}/" "${InstallerPath}/org.homebridge.daem
 
 ## change ownership and permissions of the plist file to make it launchctl compatible
 ##chmod 755 /usr/local/bin/homebridge-daemon.bash
-chmod 0700 ~/Library/LaunchAgents/org.homebridge.daemon.plist
-##chown root ~/Library/LaunchAgents/org.homebridge.daemon.plist
+
+chmod 0600 ~/Library/LaunchAgents/org.homebridge.daemon.plist
+chown root ~/Library/LaunchAgents/org.homebridge.daemon.plist
 
 ## start Homebridge-Daemon for this session
 echo 'Starting Homebridge-Daemon...'

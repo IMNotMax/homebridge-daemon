@@ -2,13 +2,14 @@
 
 ## remove autostart plist, stop processes
 echo 'Uninstalling Homebridge Daemon...'
-
+echo
+echo First unload the Daemon
 ## unload plist
 launchctl unload ~/Library/LaunchAgents/org.homebridge.daemon.plist
 ##forever stop /usr/local/bin/homebridge
 echo done.
 echo
-echo removing files
+echo Then remove files
 ## remove autostart plist from the /Library/LaunchDameons folder
 rm ~/Library/LaunchAgents/org.homebridge.daemon.plist
 echo done.

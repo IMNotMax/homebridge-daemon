@@ -2,7 +2,10 @@
 Script to run Homebridge as a daemon on OS X
 
 ##ToDo
-Check if the NPM Forever Agent is previously installed to skip the install in `install.bash`
+why does the ProgramArguments not load on my PList file
+Working with [this comment](https://github.com/nfarina/homebridge/issues/316#issuecomment-166695439)
+
+Adding and using Forever in the PList to launch Homebridge (Forever Agent is tested and installed if needed)
 
 ##Installation
 Download the files on your Mac.

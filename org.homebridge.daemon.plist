@@ -5,9 +5,15 @@
 	<key>Label</key>
 	<string>org.homebridge.daemon</string>
 	<key>ProgramArguments</key>
-	    <array>
-				<string>/usr/local/bin/forever start /usr/local/bin/homebridge</string>
-	    </array>
+	<array>
+    <string>/usr/local/bin/node</string>
+		<!--<string>/usr/local/bin/forever</string>
+		<string>start</string>
+		-->
+		<string>/usr/local/bin/homebridge</string><!-- ~/ doesn't work -->
+
+	</array>
+
 	<key>OnDemand</key>
 		<true/>
 	<key>UserName</key>
