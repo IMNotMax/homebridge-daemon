@@ -6,7 +6,7 @@
 	<string>org.homebridge.daemon</string>
 	<key>ProgramArguments</key>
 	    <array>
-	      <string>/usr/local/bin/homebridge-daemon.bash</string>
+				<string>/usr/local/bin/forever start /usr/local/bin/homebridge</string>
 	    </array>
 	<key>OnDemand</key>
 		<true/>
@@ -14,6 +14,7 @@
 			<string>root</string>
 	<key>RunAtLoad</key>
 	    <true/>
-
+	<key>KeepAlive</key>
+  <true/>
 </dict>
 </plist>

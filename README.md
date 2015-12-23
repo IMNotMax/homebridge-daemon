@@ -1,4 +1,4 @@
-# homebridge-daemon (not functional)
+# homebridge-daemon (not functional for me on OS X 10.7.5 - for the moment)
 Script to run Homebridge as a daemon on OS X
 
 ##ToDo
